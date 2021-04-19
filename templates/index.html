@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning Lab Experiment Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+ 
+     
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Machine Learning Lab Experiment Deployment</p></center> 
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >Naive Bayes classification for prediction of Placement</h2>
+<h4>Developed by Deepak Moud</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+<input type="text" class="form-control" id="floatingInput" name="percentage10" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter 10th Class Percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" class="form-control" id="floatingInput" name="percentage12" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter 12th Class Percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" name="BTechpercentage" class="form-control" id="floatingInput" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter BTech Aggregate</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" name="marks7sem" class="form-control" id="floatingInput" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter VII Sem Placement Performance Marks</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" name="marks6sem" class="form-control" id="floatingInput" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter VI Sem Placement Performance Marks</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" name="marks5sem" class="form-control" id="floatingInput" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter V Sem Placement performance Marks</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" name="finalperformance" class="form-control" id="floatingInput" placeholder="Percentage" required="required" />
+<label for="floatingInput">Enter Final Performance Marks</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="text" name="medium" class="form-control" id="floatingInput" placeholder="Medium1: HINDI 2:English " required="required" />
+<label for="floatingInput">Medium</label>
+</div>
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict Student Placement</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Machine Learning Lab</p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
